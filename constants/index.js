@@ -8,10 +8,6 @@ export const profileLinks = [
         title: "About",
     },
     {
-        id: "promotions",
-        title: "Promotions",
-    },
-    {
         id: "blogs",
         title: "Blogs",
     },

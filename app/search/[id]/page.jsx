@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import PokeCard from '@/components/PokeCard';
 
 const SearchPage = () => {
-    const [posts, setPosts] = useState([]);
+    const [pokemons, setPokemons] = useState([]);
 
     const [searchText, setSearchText] = useState('');
     const [searchTimeout, setSearchTimeout] = useState(null);
@@ -15,7 +15,7 @@ const SearchPage = () => {
                 const response = await fetch('/api/pokemon');
                 const data = await response.json();
 
-                setPosts(data.data);
+                setPokemons(data.data);
             }
 
             fetchPokemons();
@@ -27,7 +27,7 @@ const SearchPage = () => {
 
     const filterPokemons = (searchtext) => {
         const regex = new RegExp(searchtext, "i");
-        return posts.filter(
+        return pokemons.filter(
             (item) =>
                 regex.test(item.name) || regex.test(item.url)
         );
