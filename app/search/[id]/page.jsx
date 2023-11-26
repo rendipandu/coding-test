@@ -48,7 +48,7 @@ const SearchPage = () => {
     };
 
     return (
-        <section>
+        <section className='w-full'>
             <form className='relative w-full flex-center mb-10'>
                 <input
                     type="text"
