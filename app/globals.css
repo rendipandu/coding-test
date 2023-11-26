@@ -2,26 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.app {
+    @apply relative flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6 text-white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Nav Component */
+.logo_text {
+    @apply max-sm:hidden font-semibold text-lg text-white tracking-wide;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.navbar {
+    @apply flex justify-between items-center w-full mb-8 pt-3 bg-slate-900 p-3 text-white;
+}
+
+.pokemons {
+    @apply w-full p-[1px] rounded-[20px] flex flex-wrap gap-4 justify-evenly;
+}
+
+.pokemon_card {
+    @apply bg-slate-700 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col;
+}
+
+.search_input {
+    @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0 text-black;
 }
